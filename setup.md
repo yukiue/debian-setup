@@ -7,8 +7,8 @@
     $ sudo emacs /etc/wpa_supplicant/wpa_supplicant.conf
     
     network={
-    ssid=""
-    psk=""
+        ssid=""
+        psk=""
     }
     
     $ sudo emacs /etc/network/interfaces
@@ -26,6 +26,7 @@
 
 
 ## mathematica
-    [install for linux]http://support.wolfram.com/kb/12453
+
+[install for linux](http://support.wolfram.com/kb/12453)
     
-    [activate]https://reference.wolfram.com/language/tutorial/ActivatingMathematica.html
+[activate](https://reference.wolfram.com/language/tutorial/ActivatingMathematica.html)
