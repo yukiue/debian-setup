@@ -15,10 +15,10 @@ $ sudo emacs /etc/network/interfaces
 
 *sudo
 # visudo
-  user  ALL=(ALL) ALL
+  user  ALL=(ALL:ALL) ALL
 
 *mozc
-
+https://wiki.archlinux.jp/index.php/Mozc#.E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89.E3.83.A9.E3.82.A4.E3.83.B3.E3.81.8B.E3.82.89_Mozc_.E3.83.84.E3.83.BC.E3.83.AB.E3.82.92.E8.B5.B7.E5.8B.95
 
 *mathematica
 **install for linux
