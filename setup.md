@@ -30,3 +30,5 @@
 [install for linux](http://support.wolfram.com/kb/12453)
     
 [activate](https://reference.wolfram.com/language/tutorial/ActivatingMathematica.html)
+
+    Note: It may be necessary to start Mathematica(GUI version).
