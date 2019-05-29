@@ -44,7 +44,12 @@ $ sudo apt install fcitx fcitx-mozc dbus-x11
 $ im-config
 
 select "fcitx"
+```
+fcitx config
+```
 $ fcitx-configtool
+```
+```
 $ emacs ~/.xinitrc
 
 export DefaultImModule=fcitx
@@ -57,7 +62,7 @@ fcitx-autostart
 ```
 https://medium.com/@h.taiju/setup-japanese-input-environment-on-debian-87768042d068
 
-mozc settings
+mozc config
 ```    
 $ /usr/lib/mozc/mozc_tool --mode=config_dialog
 $ /usr/lib/mozc/mozc_tool --mode=dictionary_tool
