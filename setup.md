@@ -8,14 +8,14 @@ XKBOPTIONS="ctrl:nocaps"
 ## wireless-networks
 ```
 $ sudo emacs /etc/wpa_supplicant/wpa_supplicant.conf
-    
+
 network={
     ssid=""
     psk=""
 }
 
 $ sudo emacs /etc/network/interfaces
-    
+
 auto wlp2s0
 iface wlp2s0 inet dhcp
 wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
@@ -33,7 +33,7 @@ $ export ftp_proxy=http://$PROXY
 ## sudo
 ```
 # visudo
-    
+
 hoge  ALL=(ALL:ALL) ALL
 ```
 
@@ -94,7 +94,7 @@ $ startx
 ## mathematica
 
 [install for linux](http://support.wolfram.com/kb/12453)
-    
+
 [activate](https://reference.wolfram.com/language/tutorial/ActivatingMathematica.html)
 
 Note: It may be necessary to start Mathematica(GUI version) in order to activate.
@@ -103,3 +103,12 @@ Note: It may be necessary to start Mathematica(GUI version) in order to activate
 ```
 $ sudo apt install texlive-full
 ```
+
+## translate-shell
+```
+$ git clone https://github.com/soimort/translate-shell
+$ cd translate-shell/
+$ make
+$ [sudo] make install
+```
+https://github.com/soimort/translate-shell/blob/develop/README.md
