@@ -44,12 +44,7 @@ $ sudo apt install fcitx fcitx-mozc dbus-x11
 $ im-config
 
 select "fcitx"
-```
-fcitx config
-```
 $ fcitx-configtool
-```
-```
 $ emacs ~/.xinitrc
 
 export DefaultImModule=fcitx
@@ -62,13 +57,25 @@ fcitx-autostart
 ```
 https://medium.com/@h.taiju/setup-japanese-input-environment-on-debian-87768042d068
 
-mozc config
+mozc settings
 ```    
 $ /usr/lib/mozc/mozc_tool --mode=config_dialog
 $ /usr/lib/mozc/mozc_tool --mode=dictionary_tool
 $ /usr/lib/mozc/mozc_tool --mode=word_register_dialog
 $ /usr/lib/mozc/mozc_tool --mode=hand_writing
 $ /usr/lib/mozc/mozc_tool --mode=character_palette
+```
+
+emacs mozc
+```
+$ sudo apt install emacs-mozc
+$ emacs ~/.emacs
+
+;;mozc
+(require 'mozc)
+(setq default-input-method "japanese-mozc")
+
+;;(global-set-key (kbd "C-j") 'toggle-input-method)
 ```
 
 ## xpywm(window manager)
@@ -90,4 +97,9 @@ $ startx
     
 [activate](https://reference.wolfram.com/language/tutorial/ActivatingMathematica.html)
 
-Note: It may be necessary to start Mathematica(GUI version) in order to activate.
+Note: It may be necessary to start Mathematica(GUI version) in order to activate.
+
+## latex
+```
+$ sudo apt install texlive-full
+```
