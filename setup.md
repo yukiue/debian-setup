@@ -44,7 +44,11 @@ $ sudo apt install fcitx fcitx-mozc dbus-x11
 $ im-config
 
 select "fcitx"
+
 $ fcitx-configtool
+
++ mozc
+
 $ emacs ~/.xinitrc
 
 export DefaultImModule=fcitx
