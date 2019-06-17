@@ -116,3 +116,10 @@ $ make
 $ [sudo] make install
 ```
 https://github.com/soimort/translate-shell/blob/develop/README.md
+
+## xdg-open
+```
+$ xdg-mime query filetype hoge.*
+
+```
+https://qiita.com/apu4se/items/ff7efd8d351e09bb9b54
