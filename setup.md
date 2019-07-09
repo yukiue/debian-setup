@@ -73,8 +73,9 @@ $ /usr/lib/mozc/mozc_tool --mode=character_palette
 emacs mozc
 ```
 $ sudo apt install emacs-mozc
-$ emacs ~/.emacs
-
+```
+add the following lines to ~/.emacs
+```
 ;;mozc
 (require 'mozc)
 (setq default-input-method "japanese-mozc")
