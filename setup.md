@@ -61,7 +61,7 @@ fcitx-autostart
 ```
 https://medium.com/@h.taiju/setup-japanese-input-environment-on-debian-87768042d068
 
-mozc settings
+### mozc settings
 ```    
 $ /usr/lib/mozc/mozc_tool --mode=config_dialog
 $ /usr/lib/mozc/mozc_tool --mode=dictionary_tool
@@ -70,7 +70,7 @@ $ /usr/lib/mozc/mozc_tool --mode=hand_writing
 $ /usr/lib/mozc/mozc_tool --mode=character_palette
 ```
 
-emacs mozc
+### emacs mozc
 ```
 $ sudo apt install emacs-mozc
 ```
