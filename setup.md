@@ -1,81 +1,113 @@
-## keybinding(caps→ctrl)
+## sudo
+```shell
+adduser YOUR_HOSTNAME sudo
 ```
-$ emacs /etc/default/keyboard
 
+## keybinding
+edit /etc/default/keyboard
+```
 XKBOPTIONS="ctrl:nocaps"
 ```
 
-## wireless-networks
+## zshell
+```shell
+chsh -s /bin/zsh
 ```
-$ sudo emacs /etc/wpa_supplicant/wpa_supplicant.conf
 
+## wireless network
+edit /etc/wpa_supplicant/wpa_supplicant.conf
+```
 network={
-    ssid=""
-    psk=""
+    ssid="YOUR_SSID"
+    psk="YOUR_PSK"
 }
-
-$ sudo emacs /etc/network/interfaces
-
+```
+edit /etc/network/interfaces
+```
 auto wlp2s0
 iface wlp2s0 inet dhcp
-wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 ## proxy
 ```
-$ emacs ~/.zshrc
-PROXY="proxy.ksc.kwansei.ac.jp:8080"
-$ export http_proxy=http://$PROXY
-$ export https_proxy=http://$PROXY
-$ export ftp_proxy=http://$PROXY
+export http_proxy=http://proxy.ksc.kwansei.ac.jp:8080
+export https_proxy=http://proxy.ksc.kwansei.ac.jp:8080
+export ftp_proxy=http://proxy.ksc.kwansei.ac.jp:8080
 ```
 
-## sudo
+## additional packages
+```shell
+apt install zsh sudo emacs25 git tmux python3 python3-pip xsel
+net-tools xorg rxvt-unicode-256color wireless-tools xfonts-terminus
+fzf chromium
 ```
-# visudo
 
-hoge  ALL=(ALL:ALL) ALL
+## spacemacs
+```shell
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+```
+
+## bat
+download the .deb package from the [release page](https://github.com/sharkdp/bat/releases)
+
+```shell
+sudo dpkg -i bat_0.12.1_amd64.deb
+```
+
+## Source Code Pro
+```shell
+wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip -P /tmp/source-code-pro
+cd /tmp/source-code-pro
+unzip 1.050R-it.zip
+mkdir ~/.fonts
+cp source-code-pro-*-it/OTF/*.otf ~/.fonts/
+fc-cache -fv
 ```
 
 
 ## mozc
-```
-$ sudo apt install fcitx fcitx-mozc dbus-x11
-$ im-config
+```shell
+sudo apt install fcitx fcitx-mozc (dbus-x11)
+im-config
 
 select "fcitx"
 
-$ fcitx-configtool
+fcitx-configtool
 
-+ mozc
-
-$ emacs ~/.xinitrc
-
+add "mozc"
+```
+add the following lines to ~/.xinitrc
+```shell
 export DefaultImModule=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
-# https://fcitx-im.org/wiki/Configure_(Other)
-# eval `dbus-launch --sh-syntax --exit-with-session`
 fcitx-autostart
 ```
-https://medium.com/@h.taiju/setup-japanese-input-environment-on-debian-87768042d068
+Ref: https://medium.com/@h.taiju/setup-japanese-input-environment-on-debian-87768042d068
 
-### mozc settings
-```    
-$ /usr/lib/mozc/mozc_tool --mode=config_dialog
-$ /usr/lib/mozc/mozc_tool --mode=dictionary_tool
-$ /usr/lib/mozc/mozc_tool --mode=word_register_dialog
-$ /usr/lib/mozc/mozc_tool --mode=hand_writing
-$ /usr/lib/mozc/mozc_tool --mode=character_palette
+### mozc config
+```
+Space input style: Halfwidth
+
+```
+
+### mozc config tools
+```shell
+/usr/lib/mozc/mozc_tool --mode=config_dialog
+/usr/lib/mozc/mozc_tool --mode=dictionary_tool
+/usr/lib/mozc/mozc_tool --mode=word_register_dialog
+/usr/lib/mozc/mozc_tool --mode=hand_writing
+/usr/lib/mozc/mozc_tool --mode=character_palette
 ```
 
 ### emacs mozc
-```
-$ sudo apt install emacs-mozc
+```shell
+sudo apt install emacs-mozc
 ```
 add the following lines to ~/.emacs
-```
+```lisp
 ;;mozc
 (require 'mozc)
 (setq default-input-method "japanese-mozc")
@@ -86,14 +118,14 @@ add the following lines to ~/.emacs
 ## xpywm(window manager)
 
 [xpywm](http://www.lsnl.jp/~ohsaki/software/xpywm/)
-```
-$ wget http://www.lsnl.jp/~ohsaki/software/xpywm/Makefile
-# make install
-$ make fetch-skelton
-$ cp skel.xinitrc ~/.xinitrc
-$ cp skel.Xdefaults ~/.Xdefaults
-$ cp skel.emacs ~/.emacs
-$ startx
+```shell
+wget http://www.lsnl.jp/~ohsaki/software/xpywm/Makefile
+sudo make install
+make fetch-skelton
+cp skel.xinitrc ~/.xinitrc
+cp skel.Xdefaults ~/.Xdefaults
+cp skel.emacs ~/.emacs
+startx
 ```
 
 ## mathematica
@@ -106,30 +138,5 @@ Note: It may be necessary to start Mathematica(GUI version) in order to activate
 
 ## latex
 ```
-$ sudo apt install texlive-full
+sudo apt install texlive-full
 ```
-
-## translate-shell
-```
-$ git clone https://github.com/soimort/translate-shell
-$ cd translate-shell/
-$ make
-$ [sudo] make install
-```
-https://github.com/soimort/translate-shell/blob/develop/README.md
-
-## xdg-open
-### get a file's MIME type
-```
-$ xdg-mime query filetype hoge.*
-```
-### get the default applicatoin for a MIME type
-```
-$ xdg-mime query default image/jpeg
-```
-### change the default application for a MIME type
-```
-$ xdg-mime default xpdf.desktop application/pdf
-```
-https://wiki.archlinux.org/index.php/Xdg-utils#xdg-open
-https://qiita.com/apu4se/items/ff7efd8d351e09bb9b54
