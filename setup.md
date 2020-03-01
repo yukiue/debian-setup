@@ -15,19 +15,20 @@ chsh -s /bin/zsh
 ```
 
 ## wireless network
-edit /etc/wpa_supplicant/wpa_supplicant.conf
+add the following lines to /etc/network/interfaces
+```
+auto wlp2s0
+iface wlp2s0 inet dhcp
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+```
+add the following lines to /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 network={
     ssid="YOUR_SSID"
     psk="YOUR_PSK"
 }
 ```
-edit /etc/network/interfaces
-```
-auto wlp2s0
-iface wlp2s0 inet dhcp
-    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-```
+
 
 ## proxy
 ```
@@ -90,7 +91,6 @@ Ref: https://medium.com/@h.taiju/setup-japanese-input-environment-on-debian-8776
 ### mozc config
 ```
 Space input style: Halfwidth
-
 ```
 
 ### mozc config tools
@@ -139,4 +139,11 @@ Note: It may be necessary to start Mathematica(GUI version) in order to activate
 ## latex
 ```
 sudo apt install texlive-full
+```
+
+## zoom
+download the .deb file from the [download page](https://zoom.us/download?os=linux)
+
+```shell
+sudo apt install ./zoom_amd64.deb
 ```
