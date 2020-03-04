@@ -29,7 +29,6 @@ network={
 }
 ```
 
-
 ## proxy
 ```
 export http_proxy=http://proxy.ksc.kwansei.ac.jp:8080
@@ -39,11 +38,29 @@ export ftp_proxy=http://proxy.ksc.kwansei.ac.jp:8080
 
 ## additional packages
 ```shell
-apt install zsh sudo emacs25 git tmux python3 python3-pip xsel
-net-tools xorg rxvt-unicode-256color wireless-tools xfonts-terminus
-fzf chromium
+sudo apt install zsh fish emacs25 git tmux  xsel wireless-tools net-tools xorg rxvt-unicode-256color xfonts-terminus fzf chromium imagemagick alsa-utils
 ```
-
+### python3
+```shell
+python3 python3-pip
+```
+### ps/eps/pdf
+```shell
+sudo apt install mupdf evince gv pdftk pdfgrep
+```
+### image
+```shell
+sudo apt install mirage eog
+```
+### music
+```shell
+sudo apt install mplayer cmus
+```
+### misc
+```shell
+gnuplot unar curl mew ffmpeg nkf graphviz tree libreoffice
+```
+ 
 ## spacemacs
 ```shell
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
