@@ -22,3 +22,10 @@ $ xdg-mime default xpdf.desktop application/pdf
 ```
 https://wiki.archlinux.org/index.php/Xdg-utils#xdg-open
 https://qiita.com/apu4se/items/ff7efd8d351e09bb9b54
+
+## hyperestraier
+```shell
+sudo apt install ./libestraier8_1.4.13-14+b5_amd64.deb
+sudo apt install ./libestraier-dev_1.4.13-14+b5_amd64.deb
+sudo apt install ./hyperestraier_1.4.13-14+b5_amd64.deb
+```
