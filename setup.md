@@ -86,15 +86,14 @@ fc-cache -fv
 
 ## mozc
 ```shell
-sudo apt install fcitx fcitx-mozc (dbus-x11)
+sudo apt install fcitx fcitx-mozc dbus-x11
 im-config
-
-select "fcitx"
-
-fcitx-configtool
-
-add "mozc"
 ```
+select "fcitx"
+```shell
+fcitx-configtool
+```
+add "mozc"
 add the following lines to ~/.xinitrc
 ```shell
 export DefaultImModule=fcitx
