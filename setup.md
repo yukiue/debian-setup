@@ -38,11 +38,15 @@ export ftp_proxy=http://proxy.ksc.kwansei.ac.jp:8080
 
 ## additional packages
 ```shell
-sudo apt install zsh fish emacs25 git tmux  xsel wireless-tools net-tools xorg rxvt-unicode-256color xfonts-terminus fzf chromium imagemagick alsa-utils
+sudo apt install zsh fish emacs25 git tmux xsel wireless-tools net-tools xorg rxvt-unicode-256color fzf alsa-utils
 ```
 ### python3
 ```shell
 python3 python3-pip
+```
+### browser
+```shell
+chromium
 ```
 ### ps/eps/pdf
 ```shell
@@ -58,7 +62,7 @@ sudo apt install mplayer cmus
 ```
 ### misc
 ```shell
-gnuplot unar curl mew ffmpeg nkf graphviz tree libreoffice
+gnuplot unar curl mew ffmpeg nkf graphviz tree libreoffice imagemagick xfonts-terminus
 ```
  
 ## spacemacs
@@ -131,8 +135,8 @@ add the following lines to ~/.emacs
 ;;(global-set-key (kbd "C-j") 'toggle-input-method)
 ```
 
-## xpywm(window manager)
-
+## X window manager
+### xpywm
 [xpywm](http://www.lsnl.jp/~ohsaki/software/xpywm/)
 ```shell
 wget http://www.lsnl.jp/~ohsaki/software/xpywm/Makefile
@@ -142,6 +146,14 @@ cp skel.xinitrc ~/.xinitrc
 cp skel.Xdefaults ~/.Xdefaults
 cp skel.emacs ~/.emacs
 startx
+```
+### i3
+
+[i3](https://i3wm.org/)
+
+```shell
+sudo apt install i3
+echo "exec i3" >> ~/.xinitrc
 ```
 
 ## mathematica
