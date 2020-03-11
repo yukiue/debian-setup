@@ -38,7 +38,7 @@ export ftp_proxy=http://proxy.ksc.kwansei.ac.jp:8080
 
 ## additional packages
 ```shell
-sudo apt install zsh fish emacs25 git tmux  xsel wireless-tools net-tools xorg rxvt-unicode-256color xfonts-terminus fzf chromium imagemagick alsa-utils
+sudo apt install zsh fish emacs25 git tmux xsel rsync wireless-tools net-tools xorg rxvt-unicode-256color xfonts-terminus fzf chromium imagemagick alsa-utils
 ```
 ### python3
 ```shell
