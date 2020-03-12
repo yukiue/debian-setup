@@ -175,3 +175,6 @@ download the .deb file from the [download page](https://zoom.us/download?os=linu
 ```shell
 sudo apt install ./zoom_amd64.deb
 ```
+
+## Mendeley Desktop
+[Installation Guide for Mendeley Desktop for Ubuntu/Debian](https://www.mendeley.com/guides/download-mendeley-desktop/ubuntu/instructions)
