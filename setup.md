@@ -88,7 +88,7 @@ fc-cache -fv
 ```
 
 
-## mozc
+## Mozc
 ```shell
 sudo apt install fcitx fcitx-mozc dbus-x11
 im-config
@@ -98,6 +98,7 @@ select "fcitx"
 fcitx-configtool
 ```
 add "mozc"
+
 add the following lines to ~/.xinitrc
 ```shell
 export DefaultImModule=fcitx
@@ -135,7 +136,7 @@ add the following lines to ~/.emacs
 ;;(global-set-key (kbd "C-j") 'toggle-input-method)
 ```
 
-## X window manager
+## X Window Manager
 ### xpywm
 [xpywm](http://www.lsnl.jp/~ohsaki/software/xpywm/)
 ```shell
@@ -156,7 +157,7 @@ sudo apt install i3
 echo "exec i3" >> ~/.xinitrc
 ```
 
-## mathematica
+## Mathematica
 
 [install for linux](http://support.wolfram.com/kb/12453)
 
@@ -164,12 +165,12 @@ echo "exec i3" >> ~/.xinitrc
 
 Note: It may be necessary to start Mathematica(GUI version) in order to activate.
 
-## latex
+## LaTex
 ```
 sudo apt install texlive-full
 ```
 
-## zoom
+## Zoom
 download the .deb file from the [download page](https://zoom.us/download?os=linux)
 
 ```shell
