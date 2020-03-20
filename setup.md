@@ -54,7 +54,7 @@ sudo apt install mupdf evince gv pdftk pdfgrep
 ```
 ### image
 ```shell
-sudo apt install mirage eog
+sudo apt install mirage eog feh
 ```
 ### music
 ```shell
