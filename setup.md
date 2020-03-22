@@ -136,9 +136,10 @@ add the following lines to ~/.emacs
 ;;(global-set-key (kbd "C-j") 'toggle-input-method)
 ```
 
-## X Window Manager
-### xpywm
+## xpywm
+
 [xpywm](http://www.lsnl.jp/~ohsaki/software/xpywm/)
+
 ```shell
 wget http://www.lsnl.jp/~ohsaki/software/xpywm/Makefile
 sudo make install
@@ -148,13 +149,23 @@ cp skel.Xdefaults ~/.Xdefaults
 cp skel.emacs ~/.emacs
 startx
 ```
-### i3
+
+## i3
 
 [i3](https://i3wm.org/)
 
 ```shell
 sudo apt install i3
 echo "exec i3" >> ~/.xinitrc
+```
+
+### i3lock-fancy
+
+[i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
+
+### volumeicon
+```shell
+sudo apt install volumeicon-alsa
 ```
 
 ## Mathematica
