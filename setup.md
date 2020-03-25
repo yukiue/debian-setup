@@ -4,24 +4,24 @@ adduser YOUR_HOSTNAME sudo
 ```
 
 ## keybinding
-edit /etc/default/keyboard
+edit `/etc/default/keyboard`
 ```
 XKBOPTIONS="ctrl:nocaps"
 ```
 
-## zshell
+## Z shell
 ```shell
 chsh -s /bin/zsh
 ```
 
 ## wireless network
-add the following lines to /etc/network/interfaces
+add the following lines to `/etc/network/interfaces`
 ```
 auto wlp2s0
 iface wlp2s0 inet dhcp
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ```
-add the following lines to /etc/wpa_supplicant/wpa_supplicant.conf
+add the following lines to `/etc/wpa_supplicant/wpa_supplicant.conf`
 ```
 network={
     ssid="YOUR_SSID"
@@ -38,7 +38,7 @@ export ftp_proxy=http://proxy.ksc.kwansei.ac.jp:8080
 
 ## additional packages
 ```shell
-sudo apt install zsh fish emacs25 git tmux xsel rsync wireless-tools net-tools xorg rxvt-unicode-256color xfonts-terminus fzf chromium imagemagick alsa-utils scrot
+sudo apt install zsh fish emacs25 git tmux xsel rsync wireless-tools net-tools xorg rxvt-unicode-256color xfonts-terminus fzf chromium alsa-utils
 ```
 ### python3
 ```shell
@@ -54,7 +54,7 @@ sudo apt install mupdf evince gv pdftk pdfgrep
 ```
 ### image
 ```shell
-sudo apt install mirage eog feh
+sudo apt install mirage eog
 ```
 ### music
 ```shell
@@ -99,7 +99,7 @@ fcitx-configtool
 ```
 add "mozc"
 
-add the following lines to ~/.xinitrc
+add the following lines to `~/.xinitrc`
 ```shell
 export DefaultImModule=fcitx
 export GTK_IM_MODULE=fcitx
@@ -127,7 +127,7 @@ Space input style: Halfwidth
 ```shell
 sudo apt install emacs-mozc
 ```
-add the following lines to ~/.emacs
+add the following lines to `~/.emacs`
 ```lisp
 ;;mozc
 (require 'mozc)
@@ -157,6 +157,11 @@ startx
 ```shell
 sudo apt install i3
 echo "exec i3" >> ~/.xinitrc
+```
+
+## additional packages
+```shell
+sudo apt install scrot feh dmenu i3blocks
 ```
 
 ### i3lock-fancy
