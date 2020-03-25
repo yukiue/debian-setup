@@ -159,9 +159,9 @@ sudo apt install i3
 echo "exec i3" >> ~/.xinitrc
 ```
 
-## additional packages
+## additional packages for i3
 ```shell
-sudo apt install scrot feh dmenu i3blocks
+sudo apt install dmenu i3blocks feh scrot wmctrl xdotool
 ```
 
 ### i3lock-fancy
