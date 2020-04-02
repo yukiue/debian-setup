@@ -42,7 +42,7 @@ cat /proc/asound/cards
  1 [PCH            ]: HDA-Intel - HDA Intel PCH
                       HDA Intel PCH at 0xf1134000 irq 44
 ```
-create /etc/asound.conf with following
+create `/etc/asound.conf` with following
 ```
 defaults.pcm.card 1
 defaults.ctl.card 1
