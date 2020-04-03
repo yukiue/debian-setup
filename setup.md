@@ -173,6 +173,11 @@ sudo apt install dmenu i3blocks feh scrot wmctrl xdotool
 sudo apt install volumeicon-alsa
 ```
 
+### rofi
+```shell
+sudo apt install rofi
+```
+
 ## Mathematica
 
 [install for linux](http://support.wolfram.com/kb/12453)
