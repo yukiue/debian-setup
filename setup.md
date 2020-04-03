@@ -70,6 +70,10 @@ gnuplot unar curl mew ffmpeg nkf graphviz tree libreoffice imagemagick xfonts-te
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 ```
 
+## Visual Studio Code
+[Visual Studio Code](https://code.visualstudio.com/)
+[on Linux](https://code.visualstudio.com/docs/setup/linux)
+
 ## bat
 download the .deb package from the [release page](https://github.com/sharkdp/bat/releases)
 
