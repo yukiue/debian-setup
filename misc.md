@@ -47,3 +47,26 @@ create `/etc/asound.conf` with following
 defaults.pcm.card 1
 defaults.ctl.card 1
 ```
+
+
+## epwing
+```shell
+sudo apt install lookup-el eblook
+```
+add the following lines to `.emacs`
+```lisp
+(setq lookup-enable-splash nil)
+(autoload 'lookup "lookup" nil t)
+(autoload 'lookup-region "lookup" nil t)
+(autoload 'lookup-pattern "lookup" nil t)
+(global-set-key "\C-c\C-l" 'lookup)
+(global-set-key "\C-cy" 'lookup-region)
+(global-set-key "\C-c\C-y" 'lookup-pattern)
+(setq lookup-search-agents
+      '(
+        (ndeb "~/var/dict/epwing")
+      ))
+(setq lookup-default-dictionary-options
+      '((:stemmer .  stem-english)))
+(setq lookup-use-kakasi nil)
+```
