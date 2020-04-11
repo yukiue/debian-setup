@@ -8,6 +8,9 @@ edit `/etc/default/keyboard`
 ```
 XKBOPTIONS="ctrl:nocaps"
 ```
+```shell
+sudo systemctl restart console-setup
+```
 
 ## Z shell
 ```shell
