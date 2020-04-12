@@ -179,6 +179,9 @@ sudo apt install dmenu i3blocks feh scrot wmctrl xdotool
 ```shell
 sudo apt install volumeicon-alsa
 ```
+- Click "Status Icon" and set "Left Mouse Button Action" to "Show Slider"
+
+- Click "Hotkeys" and check all three options
 
 ### rofi
 ```shell
