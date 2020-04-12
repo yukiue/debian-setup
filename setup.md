@@ -32,16 +32,9 @@ network={
 }
 ```
 
-## proxy
-```
-export http_proxy=http://proxy.ksc.kwansei.ac.jp:8080
-export https_proxy=http://proxy.ksc.kwansei.ac.jp:8080
-export ftp_proxy=http://proxy.ksc.kwansei.ac.jp:8080
-```
-
 ## additional packages
 ```shell
-sudo apt install zsh fish emacs25 git tmux xsel rsync wireless-tools net-tools xorg rxvt-unicode-256color xfonts-terminus fzf chromium alsa-utils
+sudo apt install zsh fish emacs25 git tmux xsel rsync wireless-tools net-tools xorg rxvt-unicode-256color xfonts-terminus fzf chromium alsa-utils gnuplot unar curl mew ffmpeg nkf graphviz tree libreoffice imagemagick
 ```
 ### python3
 ```shell
@@ -62,10 +55,6 @@ sudo apt install mirage eog
 ### music
 ```shell
 sudo apt install mplayer cmus
-```
-### misc
-```shell
-gnuplot unar curl mew ffmpeg nkf graphviz tree libreoffice imagemagick xfonts-terminus
 ```
  
 ## spacemacs
@@ -141,20 +130,6 @@ add the following lines to `~/.emacs`
 (setq default-input-method "japanese-mozc")
 
 ;;(global-set-key (kbd "C-j") 'toggle-input-method)
-```
-
-## xpywm
-
-[xpywm](http://www.lsnl.jp/~ohsaki/software/xpywm/)
-
-```shell
-wget http://www.lsnl.jp/~ohsaki/software/xpywm/Makefile
-sudo make install
-make fetch-skelton
-cp skel.xinitrc ~/.xinitrc
-cp skel.Xdefaults ~/.Xdefaults
-cp skel.emacs ~/.emacs
-startx
 ```
 
 ## i3
